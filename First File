@@ -1,4 +1,4 @@
-//test for basic stuff
+-//test for basic stuff
 
 // Create Sphere 
 polySphere -r 1 -sx 20 -sy 20 -ax 0 1 0 -cuv 2 -ch 1;
@@ -10,13 +10,13 @@ select -r pSphere1;
 rename "pSphere1" "Test_Orb"
 
 //Move Sphere
-
+move -r 0 0 0 ;
 
 //Scale Sphere
-
+scale -r 0 0 0 ;
 
 //Get everything that is selected
-string $sel[] = `ls -s1`;
+string $sel[] = `ls -sl`;
 
 //Create loop
 for ($each in $sel){
