@@ -1,1 +1,27 @@
+//Example of Variable (Name for value)
+string $cube2 = "MyMagicCube";
 
+//Example of Array (List)
+string $names[] = {"Pete", "Rob", "Jason"};
+
+//Print middle name on list above
+print $names[1];
+
+//creating and naming cube
+polyCube -name "MyLittleCube";
+
+//Making creation and naming process a variable
+string $HappyCube[] = `polyCube -name "MyLittleCube"`;
+print $HappyCube[0];
+
+//Move Happy Cube
+move 0 2 0 -r $HappyCube[0];
+
+//create number variable
+int $one = 2;
+
+//creating new variable which represents 2x10.
+int $calc = $one * 10;
+
+//Printing the value of the $calc varible
+print $calc
