@@ -15,11 +15,10 @@ move -r 0 0 0 ;
 //Scale Sphere
 scale -r 0 0 0 ;
 
-//Get everything that is selected
+// Get everything selected
 string $sel[] = `ls -sl`;
 
-//Create loop
-for ($each in $sel){
+// Create out loop
+for ($each in $sel) {
     select $each;
-    move 0 1 0;
 }
