@@ -25,3 +25,9 @@ int $calc = $one * 10;
 
 //Printing the value of the $calc varible
 print $calc
+
+//Define and list all selected objects
+string $Obj[] = `ls -sl`;
+
+//Moves all or specific of selected objects
+move -r 3 0 0 $Obj[1];
