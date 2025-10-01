@@ -1,2 +1,4 @@
 Array = list (Put [] at end of variable)
-vairable = another name for something (Starts with $)
+Vairable = another name for something (Starts with $)
+String = represents words. the character not value
+Integer = represents numbers. the value not character
