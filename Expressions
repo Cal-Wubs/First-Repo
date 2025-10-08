@@ -1,1 +1,4 @@
+//Extression editor is in windown tab in animation editor
 
+//move cube by frames passed
+pcube1.rotateX = frame * 8
