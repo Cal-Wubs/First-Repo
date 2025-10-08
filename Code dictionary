@@ -2,3 +2,7 @@ Array = list (Put [] at end of variable)
 Vairable = another name for something (Starts with $)
 String = represents words. the character not value
 Integer = represents numbers. the value not character
+Vector = direction and the value of that direction's distance
+Float = decimals, fractions and non-whole numbers
+Boolean = True or false
+inum = List of attributes
