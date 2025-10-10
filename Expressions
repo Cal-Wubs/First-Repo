@@ -1,4 +1,7 @@
 //Extression editor is in windown tab in animation editor
 
-//move cube by frames passed
-pcube1.rotateX = frame * 8
+//rotate cube by frames passed
+pCube1.rotateX = frame * 8
+
+//Move cube based on cone rotation
+pCube1.translateY = pCone1.rotateY * 10
