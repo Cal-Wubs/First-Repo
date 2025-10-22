@@ -3,7 +3,7 @@ move 2 2 2;
 
 polySphere -name "Alice";
 move -r 0 1 0;
-select -all;
+select "Dave" "Alice";
 
 doGroup 0 1 1;
 rename "group1" "Friends";
