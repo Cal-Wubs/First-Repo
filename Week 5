@@ -1,0 +1,14 @@
+//Maya randomiser
+//Callum Walsh
+//Version: 1
+
+//Variables
+//$Number = random number command to use on each different function
+//$Select = randomly selecting object
+//$Colour = an array of colours that a shape be may changed
+
+//Must: Randomise functions across maya
+
+//Should: Be varied in its functions as well ss not give the feeling of repetitive outcomes
+
+//Could: Be given far more functionssuch as spwaning in wholly precedurly generated objects
