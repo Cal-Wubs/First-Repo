@@ -1,6 +1,7 @@
+
 //Randomise shape
 //generates random number
-int $shapes = `rand 1 6`;
+int $shapes = `rand 1 7`;
 //if value is 1, make cube
 if ($shapes == 1) {
     polyCube;
@@ -25,6 +26,7 @@ if ($shapes == 5) {
 if ($shapes == 6) {
     polyPyramid;
 };
+
 
 //Random rotation
 // Create random integer
