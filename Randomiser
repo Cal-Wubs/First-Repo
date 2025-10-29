@@ -14,3 +14,15 @@ if ($shapes == 3) {
     polyCylinder;
 };
 
+
+//Random rotation
+// Create random integer
+int $Rotate = `rand -100 100`;
+//rotate selected onjects by random integer
+rotate $Rotate
+
+//Random move
+// Create random integer
+int $Move = `rand -10 10`;
+//Move selected onjects by random integer
+move $Move
