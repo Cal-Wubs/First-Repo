@@ -1,6 +1,6 @@
 //Randomise shape
 //generates random number
-int $shapes = `rand 1 4`;
+int $shapes = `rand 1 6`;
 //if value is 1, make cube
 if ($shapes == 1) {
     polyCube;
@@ -13,16 +13,32 @@ if ($shapes == 2) {
 if ($shapes == 3) {
     polyCylinder;
 };
-
+//if value is 4, make Cone
+if ($shapes == 4) {
+    polyCone;
+};
+//if value is 5, make Torus
+if ($shapes == 5) {
+    polyTorus;
+};
+//if value is 6, make Pyramid
+if ($shapes == 6) {
+    polyPyramid;
+};
 
 //Random rotation
 // Create random integer
-int $Rotate = `rand -100 100`;
+int $RotateX = `rand -100 100`;
+int $RotateY = `rand -100 100`;
+int $RotateZ = `rand -100 100`;
 //rotate selected onjects by random integer
-rotate $Rotate
+rotate $RotateX $RotateY $RotateZ
+
 
 //Random move
 // Create random integer
-int $Move = `rand -10 10`;
+int $MoveX = `rand -10 10`;
+int $MoveY = `rand -10 10`;
+int $MoveZ = `rand -10 10`;
 //Move selected onjects by random integer
-move $Move
+move $MoveX $MoveY $MoveZ
