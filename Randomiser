@@ -1,0 +1,16 @@
+//Randomise shape
+//generates random number
+int $shapes = `rand 1 4`;
+//if value is 1, make cube
+if ($shapes == 1) {
+    polyCube;
+}
+//if value is 2 make sphere
+if ($shapes == 2) {
+    polySphere;
+};
+//if value is 3, make cylinder
+if ($shapes == 3) {
+    polyCylinder;
+};
+
