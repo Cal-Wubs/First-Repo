@@ -118,23 +118,26 @@ int $ScaleZ = `rand -10 10`;
 scale $ScaleX $ScaleY $ScaleZ;
 }
 
+global proc BegoneThot() {
+    select -all;
+    delete;
+}
 
 
 //UI stuff
     // If the window exists, delete it
     
     
+    
     // Build the window
 window -title "Randomiser" -widthHeight 400 200 Randomiser;
 columnLayout -adjustableColumn true -rowSpacing 10;
-    button -label "Randomise shapes" -command "WildMagic()";
+    button -label "Randomise Shapes" -command "WildMagic()";
     button -label "Randomise Rotation" -command "SpinnySpin()";
     button -label "Randomise Location" -command "BAMF()";
     button -label "Randomise Size" -command "AntMan()";
+    button -label "Delete All" -command "BegoneThot()";
 setParent ..;
-
-// Show the window
-showWindow Randomiser;
 
 // Show the window
 showWindow Randomiser;
