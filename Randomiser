@@ -34,7 +34,7 @@ int $RotateX = `rand -100 100`;
 int $RotateY = `rand -100 100`;
 int $RotateZ = `rand -100 100`;
 //rotate selected onjects by random integer
-rotate $RotateX $RotateY $RotateZ
+rotate $RotateX $RotateY $RotateZ;
 
 
 //Random move
@@ -43,7 +43,7 @@ int $MoveX = `rand -10 10`;
 int $MoveY = `rand -10 10`;
 int $MoveZ = `rand -10 10`;
 //Move selected onjects by random integer
-move $MoveX $MoveY $MoveZ
+move $MoveX $MoveY $MoveZ;
 
 //Random scale
 // Create random integer
@@ -51,7 +51,7 @@ int $ScaleX = `rand -10 10`;
 int $ScaleY = `rand -10 10`;
 int $ScaleZ = `rand -10 10`;
 //Scale selected onjects by random integer
-scale $ScaleX $ScaleY $ScaleZ
+scale $ScaleX $ScaleY $ScaleZ;
 
 
 
