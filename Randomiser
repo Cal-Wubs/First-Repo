@@ -53,7 +53,7 @@ int $ScaleZ = `rand -10 10`;
 //Scale selected onjects by random integer
 scale $ScaleX $ScaleY $ScaleZ;
 
-
+//Create random Whole objects
 
 
 //Function for Ui
@@ -123,6 +123,7 @@ global proc BegoneThot() {
     select -all;
     delete;
 }
+
 
 
 //UI stuff
