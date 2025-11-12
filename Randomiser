@@ -118,6 +118,7 @@ int $ScaleZ = `rand -10 10`;
 scale $ScaleX $ScaleY $ScaleZ;
 }
 
+//Delete all
 global proc BegoneThot() {
     select -all;
     delete;
