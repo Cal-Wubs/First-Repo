@@ -57,7 +57,7 @@ scale $ScaleX $ScaleY $ScaleZ;
 
 
 //Function for Ui
-global proc RandomShapes() {
+global proc WildMagic() {
     
 //Randomise shape
 //generates random number
@@ -89,15 +89,52 @@ if ($shapes == 6) {
     
 }
 
+global proc SpinnySpin() {
+    // Create random integer
+int $RotateX = `rand -100 100`;
+int $RotateY = `rand -100 100`;
+int $RotateZ = `rand -100 100`;
+//rotate selected onjects by random integer
+rotate $RotateX $RotateY $RotateZ;
+}
+
+global proc BAMF() {
+    //Random move
+// Create random integer
+int $MoveX = `rand -10 10`;
+int $MoveY = `rand -10 10`;
+int $MoveZ = `rand -10 10`;
+//Move selected onjects by random integer
+move $MoveX $MoveY $MoveZ;
+}
+
+global proc AntMan() {
+    //Random scale
+// Create random integer
+int $ScaleX = `rand -10 10`;
+int $ScaleY = `rand -10 10`;
+int $ScaleZ = `rand -10 10`;
+//Scale selected onjects by random integer
+scale $ScaleX $ScaleY $ScaleZ;
+}
+
+
+
 //UI stuff
     // If the window exists, delete it
     
     
     // Build the window
-window -title "Randomiser" -widthHeight 200 100 Randomiser;
+window -title "Randomiser" -widthHeight 400 200 Randomiser;
 columnLayout -adjustableColumn true -rowSpacing 10;
-    button -label "Randomise shapes" -command "RandomShapes()";
+    button -label "Randomise shapes" -command "WildMagic()";
+    button -label "Randomise Rotation" -command "SpinnySpin()";
+    button -label "Randomise Location" -command "BAMF()";
+    button -label "Randomise Size" -command "AntMan()";
 setParent ..;
+
+// Show the window
+showWindow Randomiser;
 
 // Show the window
 showWindow Randomiser;
