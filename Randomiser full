@@ -1,0 +1,275 @@
+//Randomise shape
+//generates random number
+int $shapes = `rand 1 7`;
+//if value is 1, make cube
+if ($shapes == 1) {
+    polyCube;
+}
+//if value is 2 make sphere
+if ($shapes == 2) {
+    polySphere;
+};
+//if value is 3, make cylinder
+if ($shapes == 3) {
+    polyCylinder;
+};
+//if value is 4, make Cone
+if ($shapes == 4) {
+    polyCone;
+};
+//if value is 5, make Torus
+if ($shapes == 5) {
+    polyTorus;
+};
+//if value is 6, make Pyramid
+if ($shapes == 6) {
+    polyPyramid;
+};
+
+
+//Random rotation
+// Create random integer
+int $RotateX = `rand -100 100`;
+int $RotateY = `rand -100 100`;
+int $RotateZ = `rand -100 100`;
+//rotate selected onjects by random integer
+rotate $RotateX $RotateY $RotateZ;
+
+
+//Random move
+// Create random integer
+int $MoveX = `rand -10 10`;
+int $MoveY = `rand -10 10`;
+int $MoveZ = `rand -10 10`;
+//Move selected onjects by random integer
+move $MoveX $MoveY $MoveZ;
+
+//Random scale
+// Create random integer
+int $ScaleX = `rand -10 10`;
+int $ScaleY = `rand -10 10`;
+int $ScaleZ = `rand -10 10`;
+//Scale selected onjects by random integer
+scale $ScaleX $ScaleY $ScaleZ;
+
+//Colour change
+
+//Create red Lambert
+shadingNode -asShader lambert -name "Red";
+sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+connectAttr -f Red.outColor lambertSG.surfaceShader;
+
+//Set to red
+setAttr "Red.color" -type double3 0.5 0 0 ;
+
+//apply red
+hyperShade -assign Red;
+
+//Blue
+shadingNode -asShader lambert -name "Blue";
+sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+connectAttr -f Blue.outColor lambertSG.surfaceShader;
+setAttr "Blue.color" -type double3 0 0 0.5 ;
+
+hyperShade -assign Blue;
+
+
+//Green
+shadingNode -asShader lambert -name "Green";
+sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+connectAttr -f Green.outColor lambertSG.surfaceShader;
+setAttr "Green.color" -type double3 0 0.5 0 ;
+
+hyperShade -assign Green;
+
+//Yellow
+shadingNode -asShader lambert -name "Yellow";
+sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+connectAttr -f Yellow.outColor lambertSG.surfaceShader;
+setAttr "Yellow.color" -type double3 0.5 0.5 0 ;
+
+hyperShade -assign Yellow;
+
+//Pink
+shadingNode -asShader lambert -name "Pink";
+sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+connectAttr -f Pink.outColor lambertSG.surfaceShader;
+setAttr "Pink.color" -type double3 0.8 0 0.5 ;
+
+hyperShade -assign Pink;
+
+
+//Purple
+shadingNode -asShader lambert -name "Purple";
+sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+connectAttr -f Purple.outColor lambertSG.surfaceShader;
+setAttr "Purple.color" -type double3 0.25 0 0.5 ;
+
+hyperShade -assign Purple;
+
+
+//Orange
+
+shadingNode -asShader lambert -name "Orange";
+sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+connectAttr -f Orange.outColor lambertSG.surfaceShader;
+setAttr "Orange.color" -type double3 0.5 0.25 0 ;
+
+hyperShade -assign Orange;
+
+//Function for Ui
+global proc WildMagic() {
+    
+//Randomise shape
+//generates random number
+int $shapes = `rand 1 7`;
+//if value is 1, make cube
+if ($shapes == 1) {
+    polyCube;
+}
+//if value is 2 make sphere
+if ($shapes == 2) {
+    polySphere;
+};
+//if value is 3, make cylinder
+if ($shapes == 3) {
+    polyCylinder;
+};
+//if value is 4, make Cone
+if ($shapes == 4) {
+    polyCone;
+};
+//if value is 5, make Torus
+if ($shapes == 5) {
+    polyTorus;
+};
+//if value is 6, make Pyramid
+if ($shapes == 6) {
+    polyPyramid;
+};
+    
+}
+
+global proc SpinnySpin() {
+    // Create random integer
+int $RotateX = `rand -100 100`;
+int $RotateY = `rand -100 100`;
+int $RotateZ = `rand -100 100`;
+//rotate selected onjects by random integer
+rotate $RotateX $RotateY $RotateZ;
+}
+
+global proc BAMF() {
+    //Random move
+// Create random integer
+int $MoveX = `rand -10 10`;
+int $MoveY = `rand -10 10`;
+int $MoveZ = `rand -10 10`;
+//Move selected onjects by random integer
+move $MoveX $MoveY $MoveZ;
+}
+
+global proc AntMan() {
+    //Random scale
+// Create random integer
+int $ScaleX = `rand -10 10`;
+int $ScaleY = `rand -10 10`;
+int $ScaleZ = `rand -10 10`;
+//Scale selected onjects by random integer
+scale $ScaleX $ScaleY $ScaleZ;
+}
+
+//Delete all
+global proc BegoneThot() {
+    select -all;
+    delete;
+}
+
+
+//Random colour for UI
+global proc TasteTheRainbowMF() {
+    int $colour = `rand 1 8`;
+    
+    if ($colour == 1) {
+        shadingNode -asShader lambert -name "Red";
+        sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+        connectAttr -f Red.outColor lambertSG.surfaceShader;
+        setAttr "Red.color" -type double3 0.5 0 0 ;
+        select -all;
+        hyperShade -assign Red;
+    }
+    
+    if ($colour == 2) {
+        shadingNode -asShader lambert -name "Blue";
+        sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+        connectAttr -f Blue.outColor lambertSG.surfaceShader;
+        setAttr "Blue.color" -type double3 0 0 0.5 ;
+        select -all;
+        hyperShade -assign Blue;
+    }
+    
+    if ($colour == 3) {
+        shadingNode -asShader lambert -name "Green";
+        sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+        connectAttr -f Green.outColor lambertSG.surfaceShader;
+        setAttr "Green.color" -type double3 0 0.5 0 ;
+        select -all;
+        hyperShade -assign Green;
+            }
+            
+            
+    if ($colour == 4) {
+        shadingNode -asShader lambert -name "Yellow";
+        sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+        connectAttr -f Yellow.outColor lambertSG.surfaceShader;
+        setAttr "Yellow.color" -type double3 0.5 0.5 0 ;
+        select -all;
+        hyperShade -assign Yellow;
+    }
+            
+    if ($colour == 5) {
+        shadingNode -asShader lambert -name "Pink";
+        sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+        connectAttr -f Pink.outColor lambertSG.surfaceShader;
+        setAttr "Pink.color" -type double3 0.8 0 0.5 ;
+        select -all;
+        hyperShade -assign Pink;
+    }
+    
+    if ($colour == 6) {
+        shadingNode -asShader lambert -name "Purple";
+        sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+        connectAttr -f Purple.outColor lambertSG.surfaceShader;
+        setAttr "Purple.color" -type double3 0.25 0 0.5 ;
+        select -all;
+        hyperShade -assign Purple;
+    }
+    
+     if ($colour == 7) {
+         shadingNode -asShader lambert -name "Orange";
+        sets -renderable true -noSurfaceShader true -empty -name lambertSG;
+        connectAttr -f Orange.outColor lambertSG.surfaceShader;
+        setAttr "Orange.color" -type double3 0.5 0.25 0 ;
+        select -all;
+        hyperShade -assign Orange;
+     }
+}
+
+//UI stuff
+    // If the window exists, delete it
+    
+    
+    
+    // Build the window
+window -title "Randomiser" -widthHeight 400 200 Randomiser;
+columnLayout -adjustableColumn true -rowSpacing 10;
+    button -label "Randomise Shapes" -command "WildMagic()";
+    button -label "Randomise Rotation" -command "SpinnySpin()";
+    button -label "Randomise Location" -command "BAMF()";
+    button -label "Randomise Size" -command "AntMan()";
+    button -label "Delete All" -command "BegoneThot()";
+    button -label "Random Colour" -command "TasteTheRainbowMF()";
+setParent ..;
+
+// Show the window
+showWindow Randomiser;
